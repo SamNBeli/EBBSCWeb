@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EBBSC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EBBSCweb.styles.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="navheader">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EBBSC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">À Propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Organigramme">Organigramme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Ministere">Ministères</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">RSI</a>
+                        </li>
+                    </ul>
+                    <div classe="navbar-nav d-flex">
+                        <a href="#" class="btndon text-white">Faire un don</a>
+                        <a href="#"><img src="~/images/fb.png" width="30" alt="My image"></a>
+                        <a href="#"><img src="~/images/yt.png" width="30" alt="My image"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3 ">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-center text-lg-start text-white mt-auto"
+            style="background-color: black; margin-bottom: -4rem;">
+        <div class="container p-4 pb-0">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Eglise Baptiste Bellevue Salem du Canada
+                        </h6>
+                        <p>
+                            “Seulement, Au point où nous sommes parvenus, marchons d'un même pas.”
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Link</h6>
+                        <p>
+                            <a class="text-white" asp-area="" asp-controller="Home" asp-action="Index">Acceuil</a>
+                        </p>
+                        <p>
+                            <a class="text-white" asp-area="" asp-controller="Home" asp-action="About">À Propos</a>
+                        </p>
+                        <p>
+                            <a class="text-white" asp-area="" asp-controller="Home" asp-action="Organigramme">Organigramme</a>
+                        </p>
+                        <p>
+                            <a class="text-white" asp-area="" asp-controller="Home" asp-action="Ministeres">Ministères</a>
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contacts</h6>
+                        <p><i class="fas fa-home mr-3"></i> 92 Boul. Greber, Gatineau, QC</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@ebbsc.org</p>
+                        <p><i class="fas fa-phone mr-3"></i> (819)700-0210</p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+                        <a href="#"><img src="~/images/fb.png" width="30" alt="My image"></a>
+                        <a href="#"><img src="~/images/yt.png" width="30" alt="My image"></a>
+                    </div>
+                </div>
+        </div>
+
+        <div class="text-center p-3"
+             style="background-color: rgba(0, 0, 0, 0.2)">
+            &copy; 2023 - EBBSC
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
